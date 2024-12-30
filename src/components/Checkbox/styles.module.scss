@@ -1,0 +1,69 @@
+.checkbox {
+  @apply relative inline-flex cursor-pointer m-0;
+
+  -webkit-appearance: none;
+  appearance: none;
+  z-index: 2;
+  border: 0.5px solid #e1e1e1;
+  width: 25px;
+  height: 25px;
+  border-radius: 6px;
+
+  &:hover {
+    border: 0.5px solid #bdbdbd;
+
+    .icon {
+      @apply opacity-100;
+
+      path {
+        stroke: #e3e3e3;
+      }
+    }
+  }
+
+  &:active {
+    border: 0.5px solid #bdbdbd;
+
+    &:hover {
+      outline: 0;
+      box-shadow: 0 0 0 4px #eaf0fe;
+    }
+
+    .icon {
+      @apply opacity-100;
+
+      path {
+        stroke: #878787;
+      }
+    }
+  }
+
+  &:checked {
+    @apply border-0;
+    background-color: #2369f6;
+
+    &:hover {
+      background-color: #497be1;
+      @apply border-0;
+    }
+
+    & + .icon {
+      @apply opacity-100;
+
+      path {
+        stroke: white;
+      }
+    }
+  }
+}
+
+.icon {
+  @apply absolute pointer-events-none opacity-0;
+
+  transition: opacity 100ms ease-in-out;
+  z-index: 2;
+
+  svg {
+    transform: translate(2.5px, 5px);
+  }
+}

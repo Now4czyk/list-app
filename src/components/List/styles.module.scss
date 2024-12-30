@@ -1,0 +1,45 @@
+.list {
+  @apply flex flex-col items-center gap-2 border bg-white h-min;
+
+  border-color: #eeeeee;
+  border-radius: 6px;
+  box-shadow: 0px 8px 15px 0px #1414141f;
+  box-shadow: 0px 0px 4px 0px #1414141a;
+  width: 370px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.button {
+  width: 340px;
+  height: 40px;
+  padding: 9px 20px 10px 20px;
+  border-radius: 4px;
+  margin: 10px 0 10px 0;
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #141414;
+
+  background-color: #ffce22;
+  &:hover {
+    background-color: #ffd84d;
+  }
+}
+
+.hr {
+  @apply block;
+
+  width: 340px;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cdcdcd;
+  padding: 0;
+}
+
+.itemsContainer {
+  @apply w-full overflow-y-scroll scrollbar-hide;
+
+  max-height: 168px;
+}

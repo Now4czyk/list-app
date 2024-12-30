@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.wrapper {
+  @apply flex h-screen w-full items-center justify-center;
+}
+
+#root {
+  @apply w-full h-full;
+}
